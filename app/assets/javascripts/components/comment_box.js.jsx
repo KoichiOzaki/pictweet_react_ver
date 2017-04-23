@@ -49,7 +49,7 @@ var CommentList = React.createClass({
     var commentNode = this.props.data.map(function (comment) {
     return(
         <p>
-          <storng><a href={"/user/" + comment.user_id}>{comment.nickname}:</a></storng>
+          <storng><a href={"/user/" + comment.user_id}>{comment.user.nickname}:</a></storng>
           {comment.text}
         </p>
     );
