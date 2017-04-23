@@ -38,5 +38,6 @@
         <% end %>
       <% end %>
     </div>
+  <%= react_component('CommentBox', pollIntercal: 2000, url: "/api/tweets/#{@tweet.id}/comments") %>
   </div>
 </div>
