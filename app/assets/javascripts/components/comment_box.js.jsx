@@ -12,14 +12,13 @@ var CommentBox = React.createClass({
     });
   },
   handleCommentSubmit: function(comment) {
-    this.setState({data: this.state.data.concat([comment])});
+    this.setState({data: this.state.comments_data.concat([comment.comment])});
     $.ajax({
       url: this.props.url,
       dataType: 'json',
       type: 'POST',
       data: comment,
       success: function(data) {
-        debugger;
         this.setState({data: this.state.data.concat([comment])});
       }.bind(this),
       error: function(xhr, status, err) {
