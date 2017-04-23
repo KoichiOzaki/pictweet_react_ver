@@ -70,7 +70,7 @@ var CommentForm = React.createClass({
       return;
     }
     this.props.onCommentSubmit({comment: comment, tweet_id: this.props.tweet_id});
-    ReactDOM.findDOMNode(this.refs.comment).value = '';
+    ReactDOM.findDOMNode(this.refs.comment_text).value = '';
     return;
   },
   render: function() {

@@ -5,5 +5,6 @@ class Api::CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(text: params[:comment], tweet_id: params[:tweet_id], user_id: current_user.id)
+    render :index
   end
 end
